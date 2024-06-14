@@ -5,10 +5,76 @@
     box-sizing: border-box;
     font-family: "Bitter", serif;
 }
-body{
+@mixin flexFun($d, $j, $a){
+    display: flex;
+    flex-direction: $d;
+    justify-content: $j;
+    align-items: $a;
+}
+@mixin box{
+    width: 100%;
+    height: 40vh;
+}
+$padding: 2rem;
+$text: #fff;
+$mb: 1rem;
+.container{
+    width: 100%;
+    min-height: 100vh;
     background-image: url('../images/img-bg-1.jpg');
     background-size: cover;
-    background-attachment: fixed;
-    // background-position: 100% 100%;
     background-repeat: no-repeat;
+
+    padding: $padding;
+    @include flexFun(column, space-evenly, center);
+    .left{
+        @include box;
+        // background-color: yellow;
+        padding: $padding;
+        color: $text;
+        h1{
+            font-weight: 700;
+            margin-bottom: $mb;
+        }
+        p{
+            font-size: 0.813rem;
+            margin-bottom: $mb;
+            text-align: justify;
+        }
+        button{
+            background-color: rgb(29, 85, 149);
+            color: $text;
+            outline: none;
+            border: none;
+            padding: 0.413rem 0.625rem;
+            border-radius: 0.125rem;
+            cursor: pointer;;
+        }
+    }
+    .right{
+        @include box;
+        @include flexFun(row, space-between, center);
+        // background-color: yellow;
+        padding: 0 2rem;
+        position: relative;
+        img{
+            width: 50px;
+            height: 100px;
+        }
+        i{
+            position: absolute;
+            padding: 1rem;
+            background-color: gray;
+            color: $text;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .fa-arrow-left{
+            left: -22px;
+        }
+        .fa-arrow-right{
+            right: -22px;
+        }
+
+    }
 }
