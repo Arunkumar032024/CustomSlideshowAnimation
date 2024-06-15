@@ -29,26 +29,39 @@ $mb: 1rem;
     @include flexFun(column, space-evenly, center);
     .left{
         @include box;
-        // background-color: yellow;
-        padding: $padding;
+        background-color: yellow;
+        // padding: $padding;
         color: $text;
         h1{
+            font-size: 1.75rem;
             font-weight: 700;
             margin-bottom: $mb;
         }
         p{
-            font-size: 0.813rem;
+            font-size: 1.125rem;
+            line-height: 1.75rem;
             margin-bottom: $mb;
             text-align: justify;
+            // animation: flip 1s forwards;
+            // position: relative;
+            // bottom: -20%;
         }
         button{
             background-color: rgb(29, 85, 149);
             color: $text;
             outline: none;
             border: none;
-            padding: 0.413rem 0.625rem;
+            font-size: 1.125rem;
+            padding: 0.813rem 1rem;
             border-radius: 0.125rem;
-            cursor: pointer;;
+            cursor: pointer;
+            // animation: flip 1s forwards;
+            position: relative;
+                        
+        }
+        @keyframes flip {
+            0%{opacity: 0; transform:rotateX(180deg)}
+            100%{opacity: 1; transform: rotateX(0deg)}
         }
     }
     .right{
@@ -76,5 +89,28 @@ $mb: 1rem;
             right: -22px;
         }
 
+    }
+    .buttons{
+        // background-color: red;
+        width: 100%;
+        @include flexFun(row, space-evenly, center);
+        button{
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: 0;
+            outline: 0;
+            background-color: rgba(129, 129, 129, .5);
+            color: $text;
+            position: relative;
+            &.active{
+                width: 30px;
+                height: 30px;
+            }
+        }
+        .active{
+            background-color: rgba(129, 129, 129, .8);
+            // background-color: yellow;
+        }
     }
 }

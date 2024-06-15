@@ -21,15 +21,17 @@
 .container .left {
   width: 100%;
   height: 40vh;
-  padding: 2rem;
+  background-color: yellow;
   color: #fff;
 }
 .container .left h1 {
+  font-size: 1.75rem;
   font-weight: 700;
   margin-bottom: 1rem;
 }
 .container .left p {
-  font-size: 0.813rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
   margin-bottom: 1rem;
   text-align: justify;
 }
@@ -38,9 +40,21 @@
   color: #fff;
   outline: none;
   border: none;
-  padding: 0.413rem 0.625rem;
+  font-size: 1.125rem;
+  padding: 0.813rem 1rem;
   border-radius: 0.125rem;
   cursor: pointer;
+  position: relative;
+}
+@keyframes flip {
+  0% {
+    opacity: 0;
+    transform: rotateX(180deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateX(0deg);
+  }
 }
 .container .right {
   width: 100%;
@@ -69,4 +83,28 @@
 }
 .container .right .fa-arrow-right {
   right: -22px;
+}
+.container .buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.container .buttons button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 0;
+  outline: 0;
+  background-color: rgba(129, 129, 129, 0.5);
+  color: #fff;
+  position: relative;
+}
+.container .buttons button.active {
+  width: 30px;
+  height: 30px;
+}
+.container .buttons .active {
+  background-color: rgba(129, 129, 129, 0.8);
 }/*# sourceMappingURL=main.css.map */
