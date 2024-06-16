@@ -21,19 +21,20 @@
 .container .left {
   width: 100%;
   height: 40vh;
-  background-color: yellow;
   color: #fff;
 }
 .container .left h1 {
   font-size: 1.75rem;
   font-weight: 700;
   margin-bottom: 1rem;
+  animation: flip 1s forwards;
 }
 .container .left p {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
+  font-size: 1rem;
+  line-height: 1.25rem;
   margin-bottom: 1rem;
   text-align: justify;
+  animation: flip 1s forwards;
 }
 .container .left button {
   background-color: rgb(29, 85, 149);
@@ -44,16 +45,16 @@
   padding: 0.813rem 1rem;
   border-radius: 0.125rem;
   cursor: pointer;
-  position: relative;
+  animation: flip 1s forwards;
 }
 @keyframes flip {
   0% {
     opacity: 0;
-    transform: rotateX(180deg);
+    transform: translateY(100%);
   }
   100% {
     opacity: 1;
-    transform: rotateX(0deg);
+    transform: translateY(0);
   }
 }
 .container .right {
@@ -63,7 +64,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2rem;
+  background-color: yellow;
   position: relative;
 }
 .container .right img {
