@@ -64,14 +64,19 @@ $mb: 1rem;
     }
     .right{
         @include box;
-        @include flexFun(row, space-between, center);
-        background-color: yellow;
+        @include flexFun(row, center, center);
+        // background-color: yellow;
         // padding: 0 2rem;
         position: relative;
         img{
-            width: 50px;
-            height: 100px;
-            // margin: 0 2rem;
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            border-radius: 1rem;
+            display: none;
+        }
+        .current-image{
+            display: block;
         }
         i{
             position: absolute;
