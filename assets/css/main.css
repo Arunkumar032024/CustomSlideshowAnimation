@@ -9,7 +9,7 @@
 .container {
   width: 100%;
   min-height: 100vh;
-  background-image: url("../images/img-bg-1.jpg");
+  background-image: url("../images/img-1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   padding: 2rem;

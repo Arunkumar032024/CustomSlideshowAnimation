@@ -21,7 +21,7 @@ $mb: 1rem;
 .container{
     width: 100%;
     min-height: 100vh;
-    background-image: url('../images/img-bg-1.jpg');
+    background-image: url('../images/img-1.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -35,14 +35,14 @@ $mb: 1rem;
             font-size: 1.75rem;
             font-weight: 700;
             margin-bottom: $mb;
-            animation: flip 1s forwards;     
+            animation: flip 1s forwards;
         }
         p{
             font-size: 1rem;
             line-height: 1.25rem;
             margin-bottom: $mb;
             text-align: justify;
-            animation: flip 1s forwards;     
+            animation: flip 1s forwards;
         }
         button{
             background-color: rgb(29, 85, 149);
@@ -58,15 +58,11 @@ $mb: 1rem;
         @keyframes flip {
             0%{opacity: 0; transform: translateY(100%); }
             100%{opacity: 1; transform: translateY(0); }
-            // 0%{opacity: 0; transform: scale(0);}
-            // 100%{opacity: 1; transform: scale(1)}
         }
     }
     .right{
         @include box;
         @include flexFun(row, center, center);
-        // background-color: yellow;
-        // padding: 0 2rem;
         position: relative;
         img{
             width: 150px;
