@@ -19,30 +19,21 @@ $padding: 2rem;
 $text: #fff;
 $mb: 1rem;
 .container{
-    width: 100%;
-    min-height: 100vh;
-    background-image: url('../images/img-1.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-
     padding: $padding;
     @include flexFun(column, space-evenly, center);
     .left{
         @include box;
-        // background-color: yellow;
         color: $text;
         h1{
             font-size: 1.75rem;
             font-weight: 700;
             margin-bottom: $mb;
-            animation: flip 1s forwards;
         }
         p{
             font-size: 1rem;
             line-height: 1.25rem;
             margin-bottom: $mb;
             text-align: justify;
-            animation: flip 1s forwards;
         }
         button{
             background-color: rgb(29, 85, 149);
@@ -53,7 +44,6 @@ $mb: 1rem;
             padding: 0.813rem 1rem;
             border-radius: 0.125rem;
             cursor: pointer;
-            animation: flip 1s forwards;                        
         }
         @keyframes flip {
             0%{opacity: 0; transform: translateY(100%); }
@@ -70,6 +60,7 @@ $mb: 1rem;
             position: absolute;
             border-radius: 1rem;
             display: none;
+            box-shadow: 0 0 10px #000;
         }
         .current-image{
             display: block;
@@ -87,30 +78,6 @@ $mb: 1rem;
         }
         .fa-arrow-right{
             right: -22px;
-        }
-
-    }
-    .buttons{
-        // background-color: red;
-        width: 100%;
-        @include flexFun(row, space-evenly, center);
-        button{
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            border: 0;
-            outline: 0;
-            background-color: rgba(129, 129, 129, .5);
-            color: $text;
-            position: relative;
-            &.active{
-                width: 30px;
-                height: 30px;
-            }
-        }
-        .active{
-            background-color: rgba(129, 129, 129, .8);
-            // background-color: yellow;
         }
     }
 }
