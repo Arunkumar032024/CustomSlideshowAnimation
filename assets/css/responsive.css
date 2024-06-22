@@ -1,1 +1,38 @@
-/*# sourceMappingURL=responsive.css.map */
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .container .left {
+    width: 50%;
+    height: 80vh;
+    padding: 6rem 2rem;
+  }
+  .container .left h1 {
+    font-size: 3rem;
+  }
+  .container .left p {
+    font-size: 1.15rem;
+    line-height: 1.75rem;
+  }
+  .container .right {
+    min-width: 50%;
+    height: 80vh;
+    position: relative;
+  }
+  .container .right img {
+    width: 30vw;
+    height: 60vh;
+  }
+  .container .right i {
+    bottom: 0vh;
+  }
+  .container .right .fa-arrow-left {
+    left: 10vw;
+    z-index: 10;
+  }
+  .container .right .fa-arrow-right {
+    right: 23vw;
+    z-index: 10;
+  }
+}/*# sourceMappingURL=responsive.css.map */

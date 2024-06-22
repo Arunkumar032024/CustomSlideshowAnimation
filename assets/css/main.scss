@@ -53,6 +53,8 @@ $mb: 1rem;
     .right{
         @include box;
         @include flexFun(row, center, center);
+        max-width: 250px;
+        margin: 0 auto;
         position: relative;
         img{
             width: 150px;
@@ -75,9 +77,11 @@ $mb: 1rem;
         }
         .fa-arrow-left{
             left: -22px;
+            z-index: 10;
         }
         .fa-arrow-right{
             right: -22px;
+            z-index: 10;
         }
     }
 }

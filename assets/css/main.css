@@ -56,6 +56,8 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  max-width: 250px;
+  margin: 0 auto;
   position: relative;
 }
 .container .right img {
@@ -79,7 +81,9 @@
 }
 .container .right .fa-arrow-left {
   left: -22px;
+  z-index: 10;
 }
 .container .right .fa-arrow-right {
   right: -22px;
+  z-index: 10;
 }/*# sourceMappingURL=main.css.map */
